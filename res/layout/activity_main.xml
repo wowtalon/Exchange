@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.zhuangshq.exchange.MainActivity" >
+
+    <TextView
+        android:id="@+id/txtMainRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/hello_world"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textYinlian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMainRate"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="当前银联汇率为：0.0"
+        android:textSize="24sp" />
+
+    <include
+        android:id="@+id/bank_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textYinlian"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        layout="@layout/bank_list" />
+
+    <Button
+        android:id="@+id/btnUpate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bank_list"
+        android:text="更新" />
+
+    <RadioGroup
+        android:id="@+id/radioMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnUpate"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radioCNY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnCNY"
+            android:layout_marginTop="14dp"
+            android:checked="true"
+            android:text="人民币转日元" />
+
+        <RadioButton
+            android:id="@+id/radioJPY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/btnJPY"
+            android:layout_marginTop="14dp"
+            android:text="日元转人民币" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/radioMoney"
+        android:gravity="center_horizontal" >
+
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:hint="要转换的数额..."
+            android:inputType="numberDecimal" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnTranlate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/editAmount"
+            android:text="计算" />
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="16dp"
+        layout="@layout/translate_list" />
+
+</RelativeLayout>

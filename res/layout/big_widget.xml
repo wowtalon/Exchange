@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.zhuangshq.exchange.MainActivity" >
+
+    <TextView
+        android:id="@+id/txtRateCN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:gravity="center"
+        android:text="6.392"
+        android:textColor="#fff"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/txtRateHX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRateCN"
+        android:layout_alignBottom="@+id/txtRateCN"
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/txtRateCN"
+        android:gravity="center"
+        android:text="6.392"
+        android:textColor="#fff"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="中国银行"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignLeft="@+id/txtRateHX"
+        android:text="华夏银行"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/txtNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtRateCN"
+        android:layout_below="@+id/txtRateCN"
+        android:layout_marginTop="16dp"
+        android:text="实时："
+        android:textColor="#fff"
+        android:textSize="35sp" />
+
+</RelativeLayout>
